@@ -7,8 +7,10 @@ console.log(listaAlunosNotas);
 
 function exibeNomeENota(nome) {
   if (listaAlunosNotas[0].includes(nome)) {
-    const indice = listaAlunosNotas[0].indexOf(nome);
-    const nota = listaAlunosNotas[1][indice];
+    const [alunos, medias] = listaAlunosNotas;
+    
+    const indice = alunos.indexOf(nome);
+    const nota = medias[indice];
     console.log(`A média de ${nome} é ${nota}.`);
   } else {
     console.log(`${nome} não está no cadastro`);
